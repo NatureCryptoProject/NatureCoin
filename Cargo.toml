@@ -1,8 +1,25 @@
 [package]
 name = "NatureCoin"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
+authors = ["Promin <promino71@protonmail.com>"]
+homepage = "https://github.com/NatureCryptoProject"
+repository = "https://github.com/NatureCryptoProject/NatureCoin"
+description = "NatureCoin - cryptocurrency based on charity"
+keywords = ["nature", "crypto", "cryptocurrency"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "nature_core"
+path = "src/lib.rs"
+
+[[bin]]
+name = "nature-cli"
+path = "src/main.rs"
 
 [dependencies]
+tiny-bip39 = "1.0.0"
+rand = "0.8.5"
+hex = "0.4.3"
+ed25519-dalek = "1.0.1"
+anyhow = "1.0.69"
+slip10 = "0.4.3"
